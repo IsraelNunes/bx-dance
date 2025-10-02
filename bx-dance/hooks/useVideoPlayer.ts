@@ -1,29 +1,11 @@
-/**
- * 🎥 HOOK DE PLAYER DE VÍDEO - useVideoPlayer
- *
- * Este hook demonstra o uso OBRIGATÓRIO de useRef em cenários críticos:
- * 1. Controle direto do player de vídeo (play/pause)
- * 2. Armazenamento de valores sem causar re-render
- * 3. Cleanup functions sem dependências
- *
- * REQUISITOS TÉCNICOS ATENDIDOS:
- * ✅ useRef para controle direto de componentes
- * ✅ useRef para valores mutáveis sem re-render
- * ✅ Cleanup functions armazenadas em useRef
- * ✅ Interface limpa para métodos de controle
- */
 
 import { useRef, useCallback, useEffect } from 'react';
 import { Video } from 'expo-av';
 import { VideoPlayerRef } from '../types/dance';
 
 export const useVideoPlayer = () => {
-  // 🔥 useRef OBRIGATÓRIO #1: Controle direto do player de vídeo
-  // PERMITE: Chamar métodos como play(), pause(), seekTo() diretamente
   const videoRef = useRef<Video>(null);
 
-  // 🔥 useRef OBRIGATÓRIO #2: Armazenar valores que não devem causar re-render
-  // BENEFÍCIO: Atualizar estes valores não dispara re-render desnecessário
   const playbackStatusRef = useRef({
     isPlaying: false,
     positionMillis: 0,
@@ -31,8 +13,6 @@ export const useVideoPlayer = () => {
     shouldPlay: false,
   });
 
-  // 🔥 useRef OBRIGATÓRIO #3: Armazenar callback de cleanup sem dependência
-  // IMPORTANTE: Evita re-criação da cleanup function a cada render
   const cleanupRef = useRef<(() => void) | null>(null);
 
   // useEffect para setup e cleanup do player

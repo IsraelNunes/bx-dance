@@ -2,13 +2,8 @@ import { useRef, useCallback, useEffect } from 'react';
 import { TextInput } from 'react-native';
 
 export const useSearchInput = () => {
-  // useRef OBRIGATÓRIO #4: Focar automaticamente em campos de input
   const searchInputRef = useRef<TextInput>(null);
-
-  // useRef OBRIGATÓRIO #5: Armazenar timer sem causar re-render
   const debounceTimerRef = useRef<NodeJS.Timeout | null>(null);
-
-  // useRef OBRIGATÓRIO #6: Armazenar valor anterior para comparação
   const previousValueRef = useRef<string>('');
 
   const focusSearchInput = useCallback(() => {

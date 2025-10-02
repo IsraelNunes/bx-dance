@@ -29,7 +29,6 @@ export default function VideoScreen() {
   const { updateVideoProgress } = useDanceApp();
   const { videoRef, playerControls } = useVideoPlayer();
 
-  // useEffect OBRIGATÓRIO: Carregar dados do vídeo
   useEffect(() => {
     let isMounted = true;
 
@@ -71,7 +70,6 @@ export default function VideoScreen() {
     };
   }, [params.videoData, params.moduleData]);
 
-  // useEffect OBRIGATÓRIO: Gerenciar ciclo de vida do player
   useEffect(() => {
     let progressInterval: NodeJS.Timeout;
 
@@ -100,7 +98,6 @@ export default function VideoScreen() {
     };
   }, [isPlaying, duration, video, playerControls, updateVideoProgress]);
 
-  // useEffect OBRIGATÓRIO: Auto-hide controles
   useEffect(() => {
     let hideControlsTimeout: NodeJS.Timeout;
 

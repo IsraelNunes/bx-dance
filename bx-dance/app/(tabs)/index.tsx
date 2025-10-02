@@ -1,22 +1,3 @@
-/**
- * 🏠 HOMESCREEN - TELA PRINCIPAL DE MÓDULOS
- *
- * Esta tela demonstra a integração de todos os hooks obrigatórios:
- *
- * FUNCIONALIDADES IMPLEMENTADAS:
- * 🔍 Sistema de busca com debounce (useRef)
- * 📊 Loading states profissionais (useEffect)
- * 🎯 Filtros por nível de dificuldade
- * 📱 Navegação tipada React Navigation
- * 🎨 Paleta de cores preto e laranja
- * 📈 Progresso visual por módulo
- *
- * HOOKS UTILIZADOS:
- * ✅ useDanceApp (useEffect para dados + AsyncStorage)
- * ✅ useSearchInput (useRef para foco + debounce)
- * ✅ useScrollView (useRef para scroll)
- */
-
 import React from 'react';
 import {
   View,

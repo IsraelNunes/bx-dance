@@ -28,7 +28,6 @@ export default function ModuleScreen() {
 
   const { scrollViewRef } = useScrollView();
 
-  // useEffect OBRIGATÓRIO: Carregar dados do módulo
   useEffect(() => {
     let isMounted = true;
 

@@ -44,3 +44,5 @@ app-example
 
 # documentation files (internal use)
 ESTRUTURA_PROJETO.md
+doc.md
+renderModuleHeader.md

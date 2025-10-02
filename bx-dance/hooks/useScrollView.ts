@@ -2,10 +2,7 @@ import { useRef, useCallback } from 'react';
 import { ScrollView } from 'react-native';
 
 export const useScrollView = () => {
-  // useRef OBRIGATÓRIO #7: Gerenciar scroll de listas/componentes
   const scrollViewRef = useRef<ScrollView>(null);
-
-  // useRef OBRIGATÓRIO #8: Armazenar posição do scroll sem re-render
   const scrollPositionRef = useRef({ x: 0, y: 0 });
 
   const scrollToTop = useCallback(() => {
